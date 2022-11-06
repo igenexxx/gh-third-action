@@ -1,0 +1,15 @@
+name: Deploy Project
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install node
+        uses: actions/setup-node@v3
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: App Install
+        run: npm ci
+      - name: Test App
+        run: npm test
+
