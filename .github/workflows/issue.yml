@@ -1,0 +1,8 @@
+name: Project issue
+on: issues
+jobs:
+  issue_info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Issue info
+        run: echo "Open issues - ${{ github.event.repository.open_issues }}""
